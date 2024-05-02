@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+
+    p{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap:2em;
+
+    }
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+    .calculator{
+      display: flex;
+      flex-direction: column;
+    }
+
+    button{
+      font-size:24px;
+      font-weight: 700;
+      width:40px;
+      height:40px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border:none;
+      cursor: pointer;
+
+    }
+    h1{
+      color:white;
+    }
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+</head>
+<body>
+  <div class="calculator">
+    <h1>calculator.js</h1>
+    <p>
+      <button onclick="updateCalculation('1'); ">1</button>
+      <button onclick="updateCalculation('2'); ">2</button>
+      <button onclick="updateCalculation('3'); ">3</button>
+    </p>
+    <p>
+      <button onclick="updateCalculation('4'); ">4</button>
+      <button onclick="updateCalculation('5'); ">5</button>
+      <button onclick="updateCalculation('6'); ">6</button>
+    </p>
+    <p>
+      <button onclick="updateCalculation('7'); ">7</button>
+      <button onclick="updateCalculation('8'); ">8</button>
+      <button onclick="updateCalculation('9'); ">9</button>
+    </p>
+    <p>
+      <button onclick="updateCalculation('-'); ">-</button>
+      <button onclick="updateCalculation('0'); ">0</button>
+      <button onclick="updateCalculation('/'); ">/</button>
+    </p>
+    <p>
+      <button onclick="updateCalculation('+'); ">+</button>
+      <button onclick="updateCalculation('*'); ">*</button>
+      <button onclick="updateCalculation('='); ">=</button>
+    </p>
+
+    <p>
+      <button onclick="
+        localStorage.removeItem('calculation');
+        calculation=0;
+        console.log(0);">AC</button>
+    </p>
+  </div>
+  
+
+  <script>
+
+    
+    let calculation =localStorage.getItem('calculation')||'';
+    console.log(calculation);
+    
+
+
+
+    function updateCalculation(data) {
+      if(data === '='){
+        calculation = eval(calculation); 
+        console.log(calculation);
+        localStorage.setItem('calculation', calculation);
+
+      }
+      else{
+      calculation+=data;
+      console.log(calculation);
+      localStorage.setItem('calculation', calculation);
+      }
+    }
+  </script>
+</body>
+</html>

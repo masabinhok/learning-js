@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boolean Exercise</title>
+  </head>
+  <body>
+    <script>
+      const name = "Sabin";
+      const hour = 20;
+      if (hour >= 6 && hour < 12) {
+        console.log(`GOODMORNING ${name}`);
+      } else if (hour >= 12 && hour < 17) {
+        console.log(`GOODAFTERNOON ${name}`);
+      } else {
+        console.log(`GOODNIGHTTT ${name}`);
+      }
+
+      const age = 66;
+      const isHoliday= false;
+      if ((age <= 6 || age >= 65) && isHoliday===false) {
+        console.log("DISCOUNT");
+      } else console.log("NO discount!");
+
+    </script>
+  </body>
+</html>
