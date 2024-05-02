@@ -1,6 +1,4 @@
-Got it! Here's the revised README with the acknowledgment to SuperSimpleDev:
 
----
 
 # JavaScript Full Course and Tutorial
 
@@ -30,6 +28,4 @@ I am currently learning JavaScript with the amazing tutorial series by SuperSimp
 
 This JavaScript tutorial series is project-based, providing hands-on experience for aspiring software engineers. Each tutorial builds on a project, offering JavaScript exercises to reinforce learning. By the end of the course, you'll have the skills to create complex, interactive websites using HTML, CSS, and JavaScript, propelling you further on your journey to becoming a web developer and software engineer.
 
----
 
-Feel free to adjust and expand upon this template as needed!
