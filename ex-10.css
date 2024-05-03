@@ -1,0 +1,38 @@
+.is-toggled {
+  background-color: black;
+  color: white;
+}
+
+button {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.add-to-cart-button {
+  background-color: rgb(255, 216, 20);
+  border: none;
+  padding: 10px 50px;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.request-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.schedule-button {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}

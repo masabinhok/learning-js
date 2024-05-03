@@ -1,0 +1,64 @@
+body{
+  background-image: url(images/math.avif);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.calculator{
+background-color: #121212;
+border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  padding:30px 50px;
+
+}
+
+button{
+  border:2px solid black;
+  width:80px;
+  height: 80px;
+  border-radius: 50%;
+  color:white;
+  background-color: rgb(75, 75, 75);
+  margin:1px;
+  cursor: pointer;
+  padding:8px;
+  font-size: 24px;
+
+
+}
+
+button:hover{
+  
+}
+
+button:active{
+  transform: translateY(-1px);
+  opacity: 0.75;
+}
+
+.operators{
+  background-color: orange;
+}
+
+.result{
+  border:2px solid black;
+  height:100px;
+  padding:16px 10px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: bold;
+
+}
+
+h1{
+  padding:24px;
+  border-radius: 16px;
+  color:rgb(255, 94, 0);
+  margin-bottom:0px;
+  
+}
