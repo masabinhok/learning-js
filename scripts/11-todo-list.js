@@ -4,12 +4,14 @@ const todoList = ["study", "js"];
 renderTodoList();
 
 function renderTodoList() {
-  let todoListHTML = "";
+  let todoListHTML = '';
   for (let i = 0; i < todoList.length; i++) {
     const todo = todoList[i];
     const html = `<p>${todo}</p>`;
     todoListHTML += html;
   }
+  console.log(todoListHTML);
+  
   document.querySelector(".js-todo-list").innerHTML = todoListHTML;
 }
 
