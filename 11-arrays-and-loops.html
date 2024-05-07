@@ -33,19 +33,41 @@
       //   console.log(value);
       // }
 
-      const nums = [1, 1, 3];
-      let total = 0;
-      for (let i = 0; i < 3; i++) {
-        total += nums[i];
-      }
-      console.log(total);
+      //
+      // let total = 0;
+      // for (let i = 0; i < 3; i++) {
+      //   total += nums[i];
+      // }
+      // console.log(total);
 
-      const numsDoubled = [];
-      for (let i = 0; i < 3; i++) {
+      //
+
+      // for(let i=0; i<10; i++){
+      //   if(i%3===0){
+      //     continue;}
+
+      //   console.log(i);
+
+      // }
+
+      //loops with function
+      
+
+      function doubleArray(nums){
+        const numsDoubled = [];
+      for (let i = 0; i < nums.length; i++) {
         const num = nums[i];
+        if(num===0){
+          continue;
+        }
         numsDoubled.push(num * 2);
       }
-      console.log(numsDoubled);
+      return numsDoubled;
+      }
+
+      console.log(doubleArray([6,0,5]));
+
+      
     </script>
   </body>
 </html>

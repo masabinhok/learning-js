@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="scripts/11-todo-list.js"></script>
+  <link rel="stylesheet" href="css/11-todo-list.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo List</title>
@@ -9,11 +9,15 @@
 <body>
 
   <p>Todo List</p>
-  <input placeholder="Todo task" class="js-name-input" type="text">
-  <button onclick="addTodo();">Add</button>
 
-  <div class="js-todo-list"></div>
+  <div class="todo-input-grid">
+    <input placeholder="Todo task" class="js-name-input name-input" type="text">
+    <input class="js-date-input date-input" type="date">
+    <button class="add-button" onclick="addTodo();">Add</button>  
+  </div>
 
+  <div class="js-todo-list todo-grid"></div>
+  <script src="scripts/11-todo-list.js"></script>
   
 </body>
 </html>
