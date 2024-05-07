@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11 II</title>
+  </head>
+  <body>
+    <script>
+      function findSearch(strings) {
+        for (let i = 0; i < strings.length; i++) {
+          let checkString = strings[i];
+          if (checkString === "search") {
+            console.log(i);
+            return;
+          }
+
+        }
+
+        console.log(-1);
+      }
+
+      findSearch(["hello", "world", "search", "good"]);
+      findSearch(['not', 'found', 'search', 'hi', 'hello', 'search']);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11 r</title>
+  </head>
+  <body>
+    <script>
+      let count = 0;
+      const foods = ["egg", "apple", "egg", "egg", "ham"];
+      console.log(removeEgg(foods));
+      console.log(foods);
+
+      function removeEgg(foods) {
+        const foodsCopy = foods.slice();
+        foodsCopy.reverse();
+
+
+        for (let i = 0; i < foodsCopy.length; ) {
+          if (foodsCopy[i] === "egg") {
+            foodsCopy.splice(i, 1);
+            count++;
+            if (count === 2) break;
+          } else i++;
+        }
+
+        return foodsCopy.reverse();
+      }
+    </script>
+  </body>
+</html>
