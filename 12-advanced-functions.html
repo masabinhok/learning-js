@@ -6,101 +6,144 @@
     <title>Advanced Functions</title>
   </head>
   <body>
+    <button class="js-button">Click</button>
     <script>
-            //       function greeting() {
-            //         console.log("Hello");
-            //       }
-
-            //       greeting();
-
-            //       //function are values. we can save a function in a variable
-
-            //       //functin without a name is calle anonymous
-
-            //       const num = 2;
-            //       const function1 = function () {
-            //         console.log("Namaste");
-            //       };
-
-            //       function1();
-            //       console.log(function1);
-            //       console.log(typeof function1);
-
-            //       const object1 = {
-            //         num: 2,
-            //         fun: function () {
-            //           console.log("Namaste");
-            //         },
-            //       };
-
-            //       function display(param) {
-            //         console.log(param);
-            //       }
-
-            //       display(2);
-
-            //       object1.fun();
-
-            //       function run(param){
-            //         param();
-            //       }
-
-            //       run(function () {
-            //         console.log('hello4');
-            //       })
-
-            //       //passing function as a parameter
-            //       //callback function
-
-            // function sabin (bishaka) {
-            //   bishaka();
-            // }
-
-            // sabin( function (){
-            //   console.log('i miss you');
-            // })
-
-            // //setTimeout le chai hamilai lets us use functionlater in the future
-
-            // setTimeout(function () {
-            //   console.log("Timeout");
-            // }, 3000);
-            // setTimeout(function () {
-            //   console.log("2");
-            // }, 2000);
-
-            // //asynchronus code
-            // //computer wont wait for 3s, instead it goes to next line
-
-            // console.log("next line");
-
-            // //synchronus code waits for one line to be complete
-
-            // loop through an array()
 
 
-            //another way to loop through an array
+      console.log([1,-3,5].filter((value, index)=>{
+      // if(value>=0){
 
-            [
-              'make dinner',
-              'wash dishes',
-              'watch youtube'].forEach(function(value, index){
-                
-                if(value==='wash dishes'){
-                  return;
-                }
-                
-                console.log(value, index);
-            });
+      //   return true;
+      // }
+      // else return false;
+      // }));
+
+      return value>=0;}));
 
 
-            //continue lets us skip
-            //foreach ma continue hunna
+      console.log([1,1,3].map((value, index)=>{
+        return value*(index+1);
+      }));
 
-            
+      
+
+      console.log([1,1,3].map(value=>value*2));
+
+      //closure if a function has access to a value, it will always have access to that value;
+
+      
 
 
-            
+      // const eventListener = ()=>{
+      //   console.log("clicked");
+      // }
+      // const buttonElement = document.querySelector(".js-button");
+      // buttonElement.addEventListener("click", eventListener);
+      //   buttonElement.addEventListener('click', eventListener);
+
+
+      
+
+      //       function greeting() {
+      //         console.log("Hello");
+      //       }
+
+      //       greeting();
+
+      //       //function are values. we can save a function in a variable
+
+      //       //functin without a name is calle anonymous
+
+      //       const num = 2;
+      //       const function1 = function () {
+      //         console.log("Namaste");
+      //       };
+
+      //       function1();
+      //       console.log(function1);
+      //       console.log(typeof function1);
+
+      //       const object1 = {
+      //         num: 2,
+      //         fun: function () {
+      //           console.log("Namaste");
+      //         },
+      //       };
+
+      //       function display(param) {
+      //         console.log(param);
+      //       }
+
+      //       display(2);
+
+      //       object1.fun();
+
+      //       function run(param){
+      //         param();
+      //       }
+
+      //       run(function () {
+      //         console.log('hello4');
+      //       })
+
+      //       //passing function as a parameter
+      //       //callback function
+
+      // function sabin (bishaka) {
+      //   bishaka();
+      // }
+
+      // sabin( function (){
+      //   console.log('i miss you');
+      // })
+
+      // //setTimeout le chai hamilai lets us use functionlater in the future
+
+      // setTimeout(function () {
+      //   console.log("Timeout");
+      // }, 3000);
+      // setTimeout(function () {
+      //   console.log("2");
+      // }, 2000);
+
+      // //asynchronus code
+      // //computer wont wait for 3s, instead it goes to next line
+
+      // console.log("next line");
+
+      // //synchronus code waits for one line to be complete
+
+      // loop through an array()
+
+      //another way to loop through an array
+
+      // ["make dinner", "wash dishes", "watch youtube"].forEach(
+      //   (value, index) => {
+      //     if (value === "wash dishes") {
+      //       return;
+      //     }
+
+      //     console.log(value, index);
+      //   }
+      // );
+
+      // const arrowFunction = () => {
+      //   console.log("sabin");
+      // };
+
+      // arrowFunction();
+
+      // const oneParam = (param) => param + 5;
+
+      // console.log(oneParam(3));
+
+      // const object2 = {
+      //   method: () => {},
+      //   method() {},
+      // };
+
+      //continue lets us skip
+      //foreach ma continue hunna
     </script>
   </body>
 </html>
