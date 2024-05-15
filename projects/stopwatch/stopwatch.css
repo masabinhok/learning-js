@@ -1,0 +1,101 @@
+body{
+  margin:0;
+  padding:0;
+  background-color: #8c52ff;
+  color:white;
+
+}
+
+*{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+
+.container{
+  margin-top:20px;
+  width:100vw;
+  height:100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top:100px;
+}
+
+.intro{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding:20px;
+  border-radius: 16px;
+}
+
+.intro-title{
+  font-size: 40px;
+  text-align: center;
+}
+
+
+.stopwatch-div{
+  width:840px;
+  height:600px;
+  border-radius: 20px;;
+  display: flex;
+  flex-direction: column;
+  background-color: #DDE392;
+  padding:16px;
+}
+.timer{
+  display: flex;
+  flex-direction: row;
+  flex:0.6;
+  align-items: center;
+  justify-content: space-around;
+  gap:4px;
+
+}
+
+.timer div{
+  background-color: #77B6EA;
+  flex:0.25;
+  height:100%;
+  padding:8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:100px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex:0.4;
+}
+
+.start{
+  padding:10px 20px;
+  width:150px;
+  height:150px;
+  border-radius: 1000px;
+  text-align: center;
+  border:none;
+  font-size:20px;
+  cursor: pointer;
+  background-color:#256D1B;
+  color:white;
+}
+
+.stop{
+  padding:10px 20px;
+  width:150px;
+  height:150px;
+  border-radius: 1000px;
+  text-align: center;
+  border:none;
+  font-size:20px;
+  cursor: pointer;
+  background-color: #BC3908;
+  color:white;
+}
