@@ -14,6 +14,38 @@ const products = [
       "apparel"
     ]
   },
+
+  {
+    id: "id1",
+    image:"images/products/umbrella.jpg",
+    name: "Rainguard Umbrella",
+    rating:{
+      stars:4.0,
+      count: 99
+    },
+    priceCents: 1000,
+    keywords:[
+      "umbrella",
+      "rain",
+      "monsoon"
+    ]
+  },
+
+  {
+  id: "id2",
+  image:"images/products/backpack.jpg",
+  name: "UrbanNomad Backpack",
+  rating:{
+    stars:4.5,
+    count: 43
+  },
+  priceCents:2609,
+  keywords:[
+    "bag",
+    "school",
+    "baggage"
+  ]
+},
   {
     id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
     image: "images/products/intermediate-composite-basketball.jpg",
