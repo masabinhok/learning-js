@@ -135,10 +135,7 @@ document.querySelectorAll(".js-delete-quantity-link").forEach((link) => {
 link.addEventListener("click", () => {
   const productId = link.dataset.productId;
   removeFromCart(productId);
-  const toDelete = document.querySelector(
-    `.js-cart-item-container-${productId}`
-  );
-  toDelete.remove();
+  renderOrderSummary();
   updateCartQuantity();
   renderPaymentSummary();
 });
