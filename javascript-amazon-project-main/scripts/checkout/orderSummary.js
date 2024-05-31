@@ -160,6 +160,7 @@ updateCartQuantity();
 function updateCartQuantity() {
 const cartQuantity = calculateCartQuantity();
 document.querySelector(".js-return-to-home-link").innerHTML = cartQuantity;
+renderPaymentSummary();
 }
 
 hello(); //hellojs external library
@@ -190,7 +191,7 @@ link.addEventListener("click", () => {
           quantity;
         updateQuantity(productId, quantity);
         updateCartQuantity();
-      } else alert("Items cannot be negative");
+            } else alert("Items cannot be negative");
     });
 });
 });
