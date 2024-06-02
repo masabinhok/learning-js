@@ -1,5 +1,7 @@
+//import external library
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 
+//random data for practice
 export const deliveryOptions = [
   {
     id: "1",
@@ -28,6 +30,7 @@ export function getDeliveryOption(deliveryOptionId) {
   return deliveryOption || deliveryOptions[0];
 }
 
+//check for weekends with dayjs library
 function isWeekend(day) {
   const dayOfWeek = day.format("dddd");
   return dayOfWeek === "Saturday" || dayOfWeek === "Sunday";
@@ -46,7 +49,7 @@ export function calculateDeliveryDate(deliveryOption, productId) {
     }
   }
 
-  const deliveryDate = today.add(totalDaysAdded, "days");
-  const dateString = deliveryDate.format("dddd, MMMM D");
+  const deliveryDate = today.add(totalDaysAdded, "days"); //adding delivery days
+  const dateString = deliveryDate.format("dddd, MMMM D"); //date formatting
   return dateString;
 }
