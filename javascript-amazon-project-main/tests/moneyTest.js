@@ -1,5 +1,5 @@
 //LSPPDay02 Testing in JavaScript
-import { formatCurrency } from "../javascript-amazon-project-main/scripts/utils/money.js";
+import { formatCurrency } from "../scripts/utils/money.js";
 
 //Manual Testing
 //Automated Testing - uses code to test codes
