@@ -1,6 +1,6 @@
 //LSPPDay02 Testing Framework in JavaScript: JASMINE
 
-import { formatCurrency } from "../scripts/utils/money.js";
+import { formatCurrency } from "../../scripts/utils/money.js";
 
 //describe('test suite', function)
 //it('test name', function)
