@@ -1,11 +1,11 @@
 //LSPPDay02 Testing in JavaScript
-import { formatCurrency } from "../scripts/utils/money.js";
+import { formatCurrency } from "../../scripts/utils/money.js";
 
 //Manual Testing
 //Automated Testing - uses code to test codes
 
 //Test for format currency
-console.log('test suite: format currency');
+console.log("test suite: format currency");
 //Basic Test Cases
 console.log("cents to dollars");
 if (formatCurrency(2095) === "20.95") {
