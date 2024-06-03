@@ -1,6 +1,6 @@
 //LSPPDay03 Object Oriented Programming
 
-//OOP tries to represent real world
+//OOP tries to represent real world.
 
 function Cart(localStorageKey) {
   const cart = {
