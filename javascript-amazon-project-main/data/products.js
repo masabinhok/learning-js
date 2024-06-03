@@ -11,7 +11,6 @@ export function getProduct(productId) {
   return matchingProduct;
 }
 
-
 //enhanced objects with class with the knowledge of OOP learned today as class provides additional features and methods.
 class Product {
   id;
@@ -34,8 +33,32 @@ class Product {
   getPrice() {
     return `$${formatCurrency(this.priceCents)}`;
   }
+  //polymorphism: use method without needing to know which class it belongs to, we will use this method below in our code further.
+  extraInfoHTML(){
+    return '';
+  }
 }
 
+//inheritance: OOP: lets us use code between classes
+//this is a child class of Parent class: Product
+class Clothing extends Product {
+  sizeChartLink;
+  constructor(productDetails) {
+    super(productDetails); //super basically calls the constructor of parent class: Product
+    this.sizeChartLink = productDetails.sizeChartLink;
+  }
+  //parent contains this method, but rewriting this overwrites it.
+  extraInfoHTML(){
+    //super.extraInfoHTML(); if we want we can call it from its parent class
+    return `
+    <a href="${this.sizeChartLink}" target="_blank">Size Chart</a>
+    `
+  }
+}
+
+//checking inheritance
+console.log(tshirt);
+console.log(tshirt.getPrice());
 
 export const products = [
   {
@@ -509,5 +532,11 @@ export const products = [
     keywords: ["sweaters", "hoodies", "apparel", "mens"],
   },
 ].map((productDetails) => {
+  if(productDetails.type === 'clothing'){
+    return new Clothing(productDetails);
+  }
   return new Product(productDetails);
 });
+
+
+
