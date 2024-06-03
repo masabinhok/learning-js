@@ -34,8 +34,8 @@ class Product {
     return `$${formatCurrency(this.priceCents)}`;
   }
   //polymorphism: use method without needing to know which class it belongs to, we will use this method below in our code further.
-  extraInfoHTML(){
-    return '';
+  extraInfoHTML() {
+    return "";
   }
 }
 
@@ -48,17 +48,47 @@ class Clothing extends Product {
     this.sizeChartLink = productDetails.sizeChartLink;
   }
   //parent contains this method, but rewriting this overwrites it.
-  extraInfoHTML(){
+  extraInfoHTML() {
     //super.extraInfoHTML(); if we want we can call it from its parent class
     return `
     <a href="${this.sizeChartLink}" target="_blank">Size Chart</a>
-    `
+    `;
   }
 }
-
 //checking inheritance
-console.log(tshirt);
-console.log(tshirt.getPrice());
+// console.log(tshirt);
+// console.log(tshirt.getPrice());
+//
+
+//built-in Class provided by the language itself which returns todays date
+// const date = new Date ();
+// console.log(date);
+// console.log(date.toLocaleTimeString());
+
+// console.log(this); // undefined
+
+// const object2 = {
+//   a: 2,
+//   b: this.a, // undefined ad obj has not been created yet for this to point to the obj...
+// };
+
+// logThis();
+// function logThis() {
+//   console.log(this); //undefined
+//   console.log(this); 
+  
+// }
+// logThis.call('hello'); //changing the value of this, 
+// logThis.call('hi');
+
+// this //undefined
+// const obj3 ={
+//   method: ()=>{
+//     console.log(this); //undefined
+//   }
+// };
+
+// obj3.method(); //arrow function doesnot changes the value of this
 
 export const products = [
   {
@@ -532,11 +562,8 @@ export const products = [
     keywords: ["sweaters", "hoodies", "apparel", "mens"],
   },
 ].map((productDetails) => {
-  if(productDetails.type === 'clothing'){
+  if (productDetails.type === "clothing") {
     return new Clothing(productDetails);
   }
   return new Product(productDetails);
 });
-
-
-
