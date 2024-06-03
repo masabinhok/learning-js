@@ -136,3 +136,52 @@ export function renderOrderSummary() {
     });
   });
 }
+
+
+
+  // addign class for visibility
+  document.querySelectorAll(".js-update-quantity-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      const productId = link.dataset.productId;
+      document
+        .querySelectorAll(`.js-cart-item-container-${productId}`)
+        .forEach((item) => {
+          item.classList.add("is-editing-quantity");
+        });
+    });
+  });
+
+
+document.querySelectorAll(".js-save-quantity-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    const productId = link.dataset.productId;
+    const container = document
+      .querySelectorAll(`.js-cart-item-container-${productId}`)
+      .forEach((item) => {
+        item.classList.remove("is-editing-quantity");
+      });
+
+    document
+      .querySelectorAll(`.js-quantity-input-${productId}`)
+      .forEach((input) => {
+        const quantity = Number(input.value);
+        if (quantity >= 0 && quantity <= 1000) {
+          document.querySelector(
+            `.js-quantity-label-${productId}`
+          ).innerHTML = quantity;
+          updateQuantity(productId, quantity);
+          updateCartQuantity();
+        } else alert("Items cannot be negative");
+      });
+  });
+});
+
+// failed to deploy enter key shortcut
+
+document.querySelectorAll(`.js-quantity-input`).forEach((link) => {
+  link.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      console.log(event.key);
+    }
+  });
+});
