@@ -1,22 +1,23 @@
 //LSPPDay03 Object Oriented Programming
 
-//ThisIsAPascalCase
-//thisIsAKababCase
-
 //In oop, we organize our code into objects.
 //Classes are desgined to generate objects and has extra features such as Constructor,
 
 class Cart {
+
+  //properties
   cartItems;
-  localStorageKey;
+  #localStorageKey; //# represents a private property, meaning it can only be used inside this class.
 
   //constructor is a special feature of Classes to run a block of code. the method has to be named constructor, we cannot return any thing from the constructor
   constructor(localStorageKey) {
-    this.localStorageKey = localStorageKey;
-    this.loadFromStorage();
+    this.#localStorageKey = localStorageKey;
+    this.#loadFromStorage();
   }
 
-  loadFromStorage() {
+  //methods
+  //private method
+  #loadFromStorage() {
     this.cartItems = JSON.parse(localStorage.getItem(this.localStorageKey));
 
     if (!this.cartItems) {
@@ -101,3 +102,5 @@ const businessCart = new Cart("cart-business");
 
 console.log(cart);
 console.log(businessCart);
+
+
