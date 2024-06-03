@@ -4,7 +4,6 @@
 //Classes are desgined to generate objects and has extra features such as Constructor,
 
 class Cart {
-
   //properties
   cartItems;
   #localStorageKey; //# represents a private property, meaning it can only be used inside this class.
@@ -102,5 +101,3 @@ const businessCart = new Cart("cart-business");
 
 console.log(cart);
 console.log(businessCart);
-
-
