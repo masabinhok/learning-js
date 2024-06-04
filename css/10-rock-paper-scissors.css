@@ -58,8 +58,8 @@ body{
 
 
   .reset-score-button{
-    background-color: rgb(25,25,25);
-    border:1px solid white;
+    background-color: rgb(53, 53, 53);
+    border:2px solid white;
     padding:10px 16px;
     border-radius:16px;
     width:120px;
@@ -67,7 +67,14 @@ body{
     color:white;
     font-size:15px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
+  
+  .reset-score-button:hover{
+    background-color: rgb(75, 75, 75);
+    transform: translateY(-1px);
+  }
+
 
   .reset-score-button:hover{
     background-color: black;
