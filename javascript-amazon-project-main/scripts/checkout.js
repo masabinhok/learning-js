@@ -13,20 +13,25 @@ import { loadProducts, loadProductsFetch } from "../data/products.js";
 // Then, rendering the checkout header, payment summary, and order summary
 //async function returns a promise.
 async function loadPage() {
-  await loadProductsFetch();
-
-  await new Promise((resolve) => {
-    loadCart(() => {
-      resolve();
+  try {
+    // throw "error1";
+    await loadProductsFetch();
+    const value = await new Promise((resolve, reject) => {
+      // throw 'error2
+      
+      loadCart(() => {
+        //reject("error3");
+        resolve("value3");
+      });
     });
-  });
-
+  } catch (error) {
+    console.log("error");
+  }
   renderCheckoutHeader();
   renderPaymentSummary();
   renderOrderSummary();
 }
 loadPage();
-
 
 //promise.all contains array of promises
 
